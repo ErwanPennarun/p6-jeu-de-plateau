@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="square.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="weapon.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+
+    <title>The Battle for Hyrule</title>
+</head>
+
+<body>
+    <div class="container main-container">
+        <h1 class="main-title">THE BATTLE FOR HYRULE</h1>
+        <div class="row main-row">
+            <div class="col-sm-2">
+                <img src="img/zeldahw.png" class="img-player">
+                <div class="info-player info-left">
+                    <div class="left-decoration"></div>
+                    <div class="right-decoration" id="right-dec"></div>
+                    <p class="name-player">Zelda</p>
+                    <p class="info-name">Arme <img id="wp1" class="img-weapon"></p>
+                    <p class="info-name">Force</p>
+                    <p class="info-force" id="wfp1"></p>
+
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div id="grid"></div>
+                <div id="annonce-fight" class="text-center">
+                    <p class="font-fight">Un combat pour Hyrule s'engage...</p>
+                    <div class="left-decoration"></div>
+                    <div class="right-decoration"></div>
+                </div>
+                <div id="fight" class="text-center">
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p class="hp-number">HP :<span id="hpp1"></span></p>
+                            <progress class="hp-bar" id="health-p1" value="100" max="100"></progress>
+                            <img src="img/zeldahw.png" class="fighting-img"><img src="img/shield.png" id="defendp1">
+
+
+                        </div>
+                        <div class="col-sm-4">
+
+                            <p class="hp-number">HP :<span id="hpp2"></span></p>
+                            <progress class="hp-bar" id="health-p2" value="100" max="100"></progress>
+                            <img src="img/linkbotw.png" class="fighting-img">
+                            <img src="img/shield.png" id="defendp2">
+                        </div>
+                        <div class="left-decoration"></div>
+                        <div class="right-decoration"></div>
+                    </div>
+
+                    <p id="to-do"><span id="playerName"></span>, que veux-tu faire ?</p>
+                    <div id="buttons">
+                        <button id="attack" onclick="newGame.attacking()" class="btn-fight">Attaquer</button>
+                        <button id="defend" onclick="newGame.defending()" class="btn-fight">Défendre</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-2">
+                <img src="img/linkbotw.png" class="img-player" style="left:40px">
+                <div class="info-player info-right">
+                    <div class="left-decoration" id="left-dec"></div>
+                    <div class="right-decoration"></div>
+                    <p class="name-player">Link</p>
+                    <p class="info-name">Arme <img id="wp2" class="img-weapon"></p>
+                    <p class="info-name">Dégats
+                        <p class="info-force" id="wfp2"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="all-weapons">
+                <div class="col-sm-2 offset-sm-1">
+                    <p>Boomerang <img class="img-weapon-desc" src="img/boomerang.png"></p>
+                    <p>10</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>Hallberd <img class="img-weapon-desc" src="img/hallberd.png"></p>
+                    <p>15</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>Scimitar <img class="img-weapon-desc" src="img/scimitar.png"></p>
+                    <p>20</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>Fire Rod <img class="img-weapon-desc" src="img/firerod.png"></p>
+                    <p>25</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>Gardienne <img class="img-weapon-desc" src="img/guardiansword.png"></p>
+                    <p>30</p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

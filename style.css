@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'the_wild_breath_of_zeldaRg';
+    src: url('fonts/the_wild_breath_of_zelda-webfont.woff2') format('woff2'),
+        url('fonts/the_wild_breath_of_zelda-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sherwoodregular';
+    src: url('fonts/sherwoodregular-webfont.woff2') format('woff2'),
+        url('fonts/sherwoodregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+#grid {
+
+    display: inline-grid;
+    position: absolute;
+    justify-self: center;
+    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: repeat(10, 50px);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+}
+
+body {
+    background-image: url('img/background-botw.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+
+}
+
+#grid>div {
+    border: 1px solid rgba(0, 0, 1, 0.3);
+}
+
+
+.blocked {
+    background-image: url("img/barrel.png");
+    background-size: 50px 50px
+}
+
+
+.p1traj 
+{
+    background-color: rgb(238, 130, 238, 0.7);
+}
+
+.p2traj 
+{
+    background-color: rgb(50, 205, 50, 0.7);
+
+}
+
+.name-p1 {
+    color: violet;
+}
+
+.name-p2 {
+    color: green;
+}
+
+/* Armes */
+
+.boomerang {
+    background-image: url('img/boomerang.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+
+}
+
+.hallberd {
+    background-image: url('img/hallberd.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+
+}
+
+.scimitar {
+    background-image: url('img/scimitar.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+.firerod {
+    background-image: url('img/firerod.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+
+.guardiansword {
+    background-image: url('img/guardiansword.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+/* Image des joueurs */
+
+div.p1 {
+    background-image: url('img/zeldahw.png');
+    background-size: 50px 50px;
+    background-position: center;
+
+}
+
+div.p2 {
+    background-image: url('img/linkbotw.png');
+    background-size: 45px 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+/* Ecran de combats*/
+
+#annonce-fight {
+
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px black;
+    color: white;
+    margin-top: 150px;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+#fight {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px black;
+    color: white;
+    width: 400px;
+    height: 400px;
+    margin: 50px 50px 50px 50px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    font-family: 'sherwoodregular', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.fighting-img {
+    max-height: 180px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.font-fight {
+    font-family: 'the_wild_breath_of_zeldaRg', Arial, sans-serif;
+    font-size: 30px;
+    transform: translateY(160%)
+}
+
+.hp-bar {
+    width: 80%;
+    height: 3px;
+    color: green;
+    background: red;
+}
+
+progress::-webkit-progress-bar {
+    background: red;
+}
+
+progress::-webkit-progress-value {
+    background: green;
+}
+
+.hp-number {
+    margin-top: 12px;
+    margin-bottom: -12px
+}
+
+.btn-fight {
+    background-color: white;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    border-radius: 50px;
+    width: 30%;
+    height: 45px;
+}
+
+/* Positionnement du bouclier en cas de défense */
+#defendp1 {
+    display: none;
+    position: absolute;
+    bottom: 120px;
+    height: 70px;
+    left: 85px;
+    width: auto;
+}
+
+#defendp2 {
+    display: none;
+    position: absolute;
+    bottom: 99px;
+    height: 70px;
+    right: 83px;
+    width: auto;
+}
+
+.img-player {
+    position: absolute;
+    height: 150px;
+    bottom: 160px;
+    width: auto;
+}
+
+
+.main-title {
+    color: black;
+    text-align: center;
+    margin: 40px;
+    font-family: 'the_wild_breath_of_zeldaRg', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.name-player {
+    font-family: 'the_wild_breath_of_zeldaRg', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.5em;
+    position: relative;
+
+}
+
+.name-player:after {
+    content: ' ';
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    width: 40px;
+    border: 0.05em solid rgba(234, 193, 128, 1);
+
+}
+
+.info-name {
+    font-family: 'sherwoodregular', Arial, sans-serif;
+    font-size: 18px;
+    margin-top: -10px;
+
+}
+
+.info-force {
+    margin-top: -12px;
+}
+
+.info-player {
+    width: 120px;
+    height: 260px;
+    top: 100px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    font-family: 'the_wild_breath_of_zeldaRg', Arial, sans-serif;
+    font-size: 30px;
+    position: relative;
+    z-index: 3;
+    align-self: center
+}
+
+.info-left {
+    right: 20px
+}
+
+.info.right {
+    right: 50px
+}
+
+.all-weapons {
+    width: 40%;
+    margin-top: 300px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    color: white;
+    font-family: 'sherwoodregular', Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    padding-top: 10px;
+    position: absolute;
+}
+
+
+.main-container {
+    width: 800px;
+}
+
+.img-weapon {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 2px dashed #C2B280;
+}
+
+.img-weapon-desc {
+    width: 65px;
+    height: 65px;
+}
+
+.left-decoration {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.left-decoration:before {
+
+    top: 0;
+    left: 0;
+    content: '';
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    background: url(https://www.zelda.com/breath-of-the-wild/assets/img/decorations/decorated-button__decoration.svg);
+}
+
+.left-decoration:after {
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    transform: rotate(-90deg);
+    background: url(https://www.zelda.com/breath-of-the-wild/assets/img/decorations/decorated-button__decoration.svg);
+}
+
+.right-decoration {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.right-decoration:before {
+    top: 1px;
+    right: -1px;
+    content: '';
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    transform: rotate(90deg);
+    background: url(https://www.zelda.com/breath-of-the-wild/assets/img/decorations/decorated-button__decoration.svg);
+
+}
+
+.right-decoration:after {
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    transform: rotate(180deg);
+    background: url(https://www.zelda.com/breath-of-the-wild/assets/img/decorations/decorated-button__decoration.svg);
+}
